@@ -1,16 +1,11 @@
-# movie_app
+# 🎞 CINEBOX
 
-A new Flutter project.
+- [DEMO 영상](https://imgur.com/a/Bp1z7iX)
 
-## Getting Started
+### 구현 기능
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- FutureBuilder로 Movie API 통신
+- ListView.separeted로 Movie Card UI 생성
+- Shimmer를 이용한 Skeleton UI 애니메이션
+- SharedPreference로 좋아요 누른 영화 ID 저장
+- url_launcher를 사용하여 영화 공식 홈페이지 링크 이동
