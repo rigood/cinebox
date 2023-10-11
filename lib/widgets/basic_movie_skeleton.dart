@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-class SkeletonMovie extends StatelessWidget {
-  const SkeletonMovie({super.key});
+class BasicMovieSkeleton extends StatelessWidget {
+  const BasicMovieSkeleton({super.key});
 
   @override
   Widget build(BuildContext context) {

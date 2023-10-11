@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/detail_screen.dart';
+import 'package:cinebox/screens/detail_screen.dart';
 
-class Movie extends StatelessWidget {
+class BasicMovie extends StatelessWidget {
   final int id;
   final String title, backdrop, poster;
-  const Movie(
+  const BasicMovie(
       {super.key,
       required this.id,
       required this.title,

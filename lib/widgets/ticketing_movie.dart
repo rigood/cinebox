@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/screens/detail_screen.dart';
+import 'package:cinebox/screens/detail_screen.dart';
 
-class BoxOfficeMovie extends StatelessWidget {
+class TicketingMovie extends StatelessWidget {
   final int id;
   final String title, poster, releaseDate;
   final dynamic voteAverage;
 
-  const BoxOfficeMovie({
+  const TicketingMovie({
     super.key,
     required this.id,
     required this.title,

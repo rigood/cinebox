@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:movie_app/services/api_service.dart';
-import 'package:movie_app/models/movie_detail_model.dart';
+import 'package:cinebox/services/api_service.dart';
+import 'package:cinebox/models/movie_detail_model.dart';
 
 class DetailScreen extends StatefulWidget {
   final int id;
