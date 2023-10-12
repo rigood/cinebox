@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:cinebox/constants/colors.dart';
+import 'package:cinebox/constants/themes.dart';
 import 'package:cinebox/constants/gaps.dart';
 import 'package:cinebox/constants/sizes.dart';
 import 'package:cinebox/models/movie_model.dart';
@@ -58,6 +58,7 @@ class HomeScreen extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             for (var movieList in _movieLists) ...[
               MovieListTitle(text: movieList["title"]),

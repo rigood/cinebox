@@ -4,7 +4,7 @@ import 'package:cinebox/models/movie_model.dart';
 import 'package:cinebox/models/movie_detail_model.dart';
 
 class ApiService {
-  static const String baseUrl = "https://ovies-api.nomadcoders.workers.dev";
+  static const String baseUrl = "https://movies-api.nomadcoders.workers.dev";
   static const String detail = "movie?id=";
 
   static Future<List<MovieModel>> getMovies(movieListName) async {

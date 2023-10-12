@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cinebox/constants/colors.dart';
+import 'package:cinebox/constants/themes.dart';
 import 'package:cinebox/constants/sizes.dart';
 
 class AppTitle extends StatelessWidget {
@@ -48,7 +48,7 @@ class AppTitleLetter extends StatelessWidget {
         style: const TextStyle(
           fontFamily: 'Oswald',
           fontSize: Sizes.size14,
-          color: ColorThemes.appTitleColor,
+          color: ColorThemes.black,
         ),
       ),
     );

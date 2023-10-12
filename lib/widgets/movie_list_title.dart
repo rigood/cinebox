@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cinebox/constants/colors.dart';
+import 'package:cinebox/constants/themes.dart';
 import 'package:cinebox/constants/sizes.dart';
 
 class MovieListTitle extends StatelessWidget {

@@ -9,8 +9,12 @@ class DetailScreen extends StatefulWidget {
   final int id;
   final String title, poster;
 
-  const DetailScreen(
-      {super.key, required this.id, required this.title, required this.poster});
+  const DetailScreen({
+    super.key,
+    required this.id,
+    required this.title,
+    required this.poster,
+  });
 
   @override
   State<DetailScreen> createState() => _DetailScreenState();

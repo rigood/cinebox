@@ -1,3 +1,6 @@
+import 'package:cinebox/constants/gaps.dart';
+import 'package:cinebox/constants/sizes.dart';
+import 'package:cinebox/constants/themes.dart';
 import 'package:flutter/material.dart';
 import 'package:cinebox/screens/detail_screen.dart';
 
@@ -33,23 +36,23 @@ class TicketingMovie extends StatelessWidget {
       child: Container(
         width: 200,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: ColorThemes.white,
           borderRadius: BorderRadius.circular(10),
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromRGBO(8, 7, 28, 0.1),
-              blurRadius: 10.0,
-              offset: Offset(0, 8),
-            )
-          ],
+          boxShadow: CustomThemes.boxshadow,
         ),
         clipBehavior: Clip.hardEdge,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Image.network('https://image.tmdb.org/t/p/w200/$poster'),
+            Image.network(
+              'https://image.tmdb.org/t/p/w200/$poster',
+            ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(15, 20, 5, 0),
+              padding: const EdgeInsets.only(
+                left: 15,
+                top: 20,
+                right: 5,
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -57,59 +60,52 @@ class TicketingMovie extends StatelessWidget {
                     title,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
-                      color: Color(0xff514769),
-                      fontSize: 16,
                       fontFamily: 'MontserratBold',
+                      fontSize: 16,
+                      color: ColorThemes.movieTitleColor,
                     ),
                   ),
-                  const SizedBox(
-                    height: 5,
-                  ),
+                  Gaps.v5,
                   Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
                         releaseDate,
                         style: const TextStyle(
-                          color: Color(0xff868e96),
-                          fontSize: 13,
+                          fontSize: Sizes.size14,
+                          color: ColorThemes.gray,
                         ),
                       ),
-                      const SizedBox(
-                        width: 5,
-                      ),
+                      Gaps.h5,
                       const Icon(
                         Icons.star_rate_rounded,
-                        size: 20,
-                        color: Color(0xff6337be),
+                        size: Sizes.size20,
+                        color: ColorThemes.starColor,
                       ),
                       Text(
                         '$voteAverage',
                         style: const TextStyle(
-                          color: Color(0xff868e96),
-                          fontSize: 13,
+                          fontSize: Sizes.size14,
+                          color: ColorThemes.gray,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 10,
-                  ),
+                  Gaps.v10,
                   Container(
                     decoration: BoxDecoration(
-                      color: const Color(0xff14b9cc),
+                      color: ColorThemes.secondary,
                       borderRadius: BorderRadius.circular(5),
                     ),
                     child: const Padding(
                       padding: EdgeInsets.symmetric(
-                        vertical: 6,
-                        horizontal: 12,
+                        vertical: Sizes.size6,
+                        horizontal: Sizes.size12,
                       ),
                       child: Text(
                         "바로예매",
                         style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 14,
+                          fontSize: Sizes.size14,
+                          color: ColorThemes.white,
                         ),
                       ),
                     ),

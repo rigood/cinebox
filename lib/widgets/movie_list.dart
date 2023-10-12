@@ -1,3 +1,4 @@
+import 'package:cinebox/widgets/error_message.dart';
 import 'package:flutter/material.dart';
 import 'package:cinebox/constants/sizes.dart';
 import 'package:cinebox/constants/gaps.dart';
@@ -24,17 +25,19 @@ class MovieList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const padding = Sizes.size20;
+
     return Container(
-      height: type == MovieListType.ticketing ? 450 : 180,
+      height: type == MovieListType.ticketing ? 445 : 180,
       margin: const EdgeInsets.only(
         bottom: Sizes.size20,
       ),
       child: ListView.separated(
         padding: EdgeInsets.only(
-          left: Sizes.size20,
-          right: Sizes.size20,
+          left: padding,
+          right: padding,
           top: type == MovieListType.ticketing ? 0 : Sizes.size5,
-          bottom: Sizes.size20,
+          bottom: padding,
         ),
         scrollDirection: Axis.horizontal,
         itemCount: snapshot.hasError ? 1 : snapshot.data?.length ?? 3,
@@ -57,8 +60,9 @@ class MovieList extends StatelessWidget {
                     poster: movie.posterPath,
                   );
           } else if (snapshot.hasError) {
-            return Text(
-              snapshot.error.toString(),
+            return ErrorMessage(
+              text: snapshot.error.toString(),
+              padding: padding,
             );
           } else {
             return type == MovieListType.ticketing
